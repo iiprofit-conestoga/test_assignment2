@@ -1,0 +1,247 @@
+{
+  "version": "39.0.0",
+  "artifacts": {
+    "Assignmnt2V1Stack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "Assignmnt2V1Stack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "Assignmnt2V1Stack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "Assignmnt2V1Stack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/4dcf3c82911ca32ba65cdf7c2baa817e089955128c9535baf115f99e3c09c132.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "Assignmnt2V1Stack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "Assignmnt2V1Stack.assets"
+      ],
+      "metadata": {
+        "/Assignmnt2V1Stack/ksolanki6269-MyFirstBucket": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "versioned": true,
+              "removalPolicy": "destroy"
+            }
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyFirstBucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ksolanki6269MyFirstBucketBC654832"
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "runtime": "*",
+              "handler": "*",
+              "code": "*",
+              "environment": "*"
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addEnvironment": [
+                "*",
+                "*"
+              ]
+            }
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda/ServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "assumedBy": {
+                "principalAccount": "*",
+                "assumeRoleAction": "*"
+              },
+              "managedPolicies": [
+                {
+                  "managedPolicyArn": "*"
+                }
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToPrincipalPolicy": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachInlinePolicy": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachInlinePolicy": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addToPrincipalPolicy": [
+                {}
+              ]
+            }
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda/ServiceRole/ImportServiceRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ksolanki6269MyLambdaServiceRole8419696B"
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda/ServiceRole/DefaultPolicy": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachToRole": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "attachToRole": [
+                "*"
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addStatements": [
+                {}
+              ]
+            }
+          },
+          {
+            "type": "aws:cdk:analytics:method",
+            "data": {
+              "addStatements": [
+                {}
+              ]
+            }
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ksolanki6269MyLambdaServiceRoleDefaultPolicy4035C867"
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyLambda/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ksolanki6269MyLambda15BB80C6"
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyTable": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": {
+              "partitionKey": {
+                "name": "*",
+                "type": "S"
+              },
+              "tableName": "*",
+              "removalPolicy": "destroy"
+            }
+          },
+          {
+            "type": "aws:cdk:hasPhysicalName",
+            "data": {
+              "Ref": "ksolanki6269MyTable7606F935"
+            }
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyTable/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ksolanki6269MyTable7606F935"
+          }
+        ],
+        "/Assignmnt2V1Stack/ksolanki6269-MyTable/ScalingRole": [
+          {
+            "type": "aws:cdk:analytics:construct",
+            "data": "*"
+          }
+        ],
+        "/Assignmnt2V1Stack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/Assignmnt2V1Stack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/Assignmnt2V1Stack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/Assignmnt2V1Stack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "Assignmnt2V1Stack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}
